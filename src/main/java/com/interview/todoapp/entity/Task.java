@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@AllArgsConstructor
+/* @AllArgsConstructor */
 @NoArgsConstructor
 public class Task {
 	
@@ -26,6 +26,9 @@ public class Task {
 	private String status; 
 	private String flag; /* we can give colours so that we know which are emergency task */
 	private String alarm;
+	
+	
+	
 	public Task(int id, String useremailid, String description, String detaildescription, String orginaldatetime,
 			String updateddatetime, String refrencelinks, String status, String flag, String alarm) {
 		this.id = id;

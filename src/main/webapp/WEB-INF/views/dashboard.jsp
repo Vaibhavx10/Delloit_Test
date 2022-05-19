@@ -81,7 +81,7 @@
 			<div class="container">
 			<div class="row">
 			<div class="container">
-				<h4 class="text-center">Todays to-do list</h4>
+				<h4 class="text-center">To do list</h4>
 			</div>	
 			
               <div class="accordion accordion-flush" id="accordionFlush">

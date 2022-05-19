@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@AllArgsConstructor
+/* @AllArgsConstructor */
 @NoArgsConstructor
 public class User {
 	@Id
@@ -35,6 +35,18 @@ public class User {
 	@OneToMany(targetEntity = Task.class, cascade = CascadeType.ALL)
 	@JoinColumn(name="task_fk",referencedColumnName="id")
 	private List<Task> tasks;
+
+	public User(int id, String uname, String upass, String fname, String lname, String email, List<Task> tasks) {
+		this.id = id;
+		this.uname = uname;
+		this.upass = upass;
+		this.fname = fname;
+		this.lname = lname;
+		this.email = email;
+		this.tasks = tasks;
+	}
+	
+	
 	
 }
 
