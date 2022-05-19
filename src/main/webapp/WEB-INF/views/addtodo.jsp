@@ -116,7 +116,8 @@
 				<div class="btn-group dropend col-lg-4">
 					<a class="btn btn-secondary dropdown-toggle" href="#" role="button"
 						id="dropdownstatus" data-bs-toggle="dropdown"
-						aria-expanded="false"> Status </a>
+						aria-expanded="false"
+						style="margin: 10px;"> Status </a>
 
 					<ul class="dropdown-menu" aria-labelledby="dropdownstatus" id="ddstatus">
 						<li><a class="dropdown-item" href="#">Completed</a></li>
@@ -128,12 +129,12 @@
 				<!-- flag -->
 				<div class="btn-group dropend col-lg-4">
 					<a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-						id="dropdownflag" data-bs-toggle="dropdown" aria-expanded="false">
+						id="dropdownflag" data-bs-toggle="dropdown" aria-expanded="false" style="margin: 10px;">
 						Flag </a>
 
 					<ul class="dropdown-menu" aria-labelledby="dropdownflag" id="ddflag">
 						<li><a class="dropdown-item bg-danger" href="#">Red</a></li>
-						<li><a class="dropdown-item" href="#">Orange</a></li>
+						<li><a class="dropdown-item" href="#" style="background: orange;">Orange</a></li>
 						<li><a class="dropdown-item bg-warning" href="#">Yellow</a></li>
 					</ul>
 				</div>
@@ -141,7 +142,7 @@
 				<!-- Alarm Notification -->
 				<div class="btn-group dropend col-lg-4">
 					<a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-						id="dropdownalarm" data-bs-toggle="dropdown" aria-expanded="false">
+						id="dropdownalarm" data-bs-toggle="dropdown" aria-expanded="false" style="margin: 10px;">
 						Alarm Notification </a>
 
 					<ul class="dropdown-menu" aria-labelledby="dropdownalarm" id="ddalarm">
@@ -153,10 +154,10 @@
 
 			<div class="col-lg-12 text-center" data-bs-toggle="modal"
 				data-bs-target="#staticBackdrop">
-				<button class="btn btn-primary " onclick="sendtoDB()" type="submit">Submit
+				<button class="btn btn-primary " onclick="sendtoDB()" style="margin: 10px;" type="submit">Submit
 					form</button>
 			</div>
-			</form>
+			
 
 
 

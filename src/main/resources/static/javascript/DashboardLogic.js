@@ -23,11 +23,12 @@ $.ajax({
 		detailDescription.innerHTML = "";			
 			
 		for (let i = 0; i < response.length; i++) {
+		var collapseable = "flush-collapse"+i;
 			var info = `<div class="accordion-item"> 
                  <h2 class="accordion-header" id="flush-headingOne">
                     <div class="container">
                       <div class="row accordion-button collapsed" type="button" 
-                              data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" 
+                              data-bs-toggle="collapse" data-bs-target='${"#"+collapseable}' aria-expanded="false" 
                               aria-controls="flush-collapseOne">
                         <div class="col-lg-6">
                           <button  class="btn btn-light">
@@ -40,7 +41,7 @@ $.ajax({
                       </div>
                     </div>
                   </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
+                  <div id='${collapseable}' class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
                     <div class="accordion-body">
                       <div class="list-group">
                         <h5 class="list-group-item list-group-item-action list-group-item-secondary">Detail Description : </h5>

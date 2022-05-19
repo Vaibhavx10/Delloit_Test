@@ -20,5 +20,7 @@ public class TaskService {
 		return task;
 	}
 	
-	
+	public Task addNewTask(Task task) {
+		return taskrepo.save(task);
+	}
 }

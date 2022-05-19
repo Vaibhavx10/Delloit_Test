@@ -13,6 +13,8 @@ import com.interview.todoapp.entity.User;
 import com.interview.todoapp.repo.TaskRepo;
 import com.interview.todoapp.repo.UserRepo;
 import com.interview.todoapp.service.LoginService;
+import com.interview.todoapp.service.TaskService;
+import com.interview.todoapp.service.UserService;
 
 @RestController
 public class UserController {
@@ -25,12 +27,19 @@ public class UserController {
 
 	@Autowired
 	private LoginService loginService;
+	
+	@Autowired
+	private TaskService taskService;
+	
+	
+	@Autowired
+	private UserService userService;
+	
 
 	@PostMapping("/addNewUser")
-	public String addNewUser(@RequestBody User user) {
+	public User addNewUser(@RequestBody User user) {
 		System.out.println("user :: " + user.toString());
-		userRepo.save(user);
-		return "user saved successfully";
+		return userService.addNewUser(user);
 	}
 
 	@GetMapping("/getAllUsers")
@@ -62,9 +71,8 @@ public class UserController {
 
 	// Add user to-do tasks
 	@PostMapping("/addTodoTask")
-	public String addTodoTask(@RequestBody Task task) {
-		taskRepo.save(task);
-		return "User Task added successfully";
+	public Task addTodoTask(@RequestBody Task task) {
+		return taskService.addNewTask(task);
 	}
 
 	// Delete user to-do tasks

@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
         
 </head>
-<body onload="init()">
+<body onload="init()" style="background-image: url('../img/bgimg.jpg');">
 
 <!-- Button trigger modal -->
 

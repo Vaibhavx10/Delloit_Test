@@ -38,12 +38,6 @@ public class UserControllerTest {
 	private UserController userController;
 	
 	
-	@Test
-	@DisplayName("Add New and Task")
-	public void addNewUserTest() {
-		User user = new User();
-
-	}
 	
 
 
