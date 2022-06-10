@@ -22,6 +22,7 @@
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
 </head>
 <body onload="init()">
+<script>var ctx = "${pageContext.request.contextPath}"</script>
 	<div class="container card">
 		<div class="row justify-content-center">
 			<jsp:include page="/WEB-INF/views/header.jsp" />

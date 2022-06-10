@@ -10,10 +10,10 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav">
-						<a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
-						<a class="nav-link active" aria-current="page" href="/addtodo">Add New Task</a> 
-						<a class="nav-link" href="/updatedelete">Update / Delete Task</a>
-						<a class="nav-link" href="/login">Login</a>
+						<a class="nav-link active" aria-current="page" href="${pageContext.servletContext.contextPath}/dashboard">Dashboard</a>
+						<a class="nav-link active" aria-current="page" href="${pageContext.servletContext.contextPath}/addtodo">Add New Task</a> 
+						<a class="nav-link" href="${pageContext.servletContext.contextPath}/updatedelete">Update / Delete Task</a>
+						<a class="nav-link" href="${pageContext.servletContext.contextPath}/login">Login</a>
 					</div>
 				</div>
 			</div>

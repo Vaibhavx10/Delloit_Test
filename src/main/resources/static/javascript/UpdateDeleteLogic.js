@@ -15,7 +15,7 @@ var data = {
 
 
 $.ajax({
-		url: "${pageContext.servletContext.contextPath}/getDataOnEmailID",
+		url: ctx+"/getDataOnEmailID",
 		type: "POST",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
@@ -207,13 +207,13 @@ $.ajax({
 function checkUserSession() {
 	var userData = JSON.parse(sessionStorage.getItem("userData"));
 	if (userData == null) {
-		window.location.href = `${pageContext.servletContext.contextPath}/login`;
+		window.location.href = ctx+`/login`;
 	}
 }
 
 function deleteIteam(data) {
 	$.ajax({
-		url: "${pageContext.servletContext.contextPath}/deleteUserToDoIteam",
+		url: ctx+"/deleteUserToDoIteam",
 		type: "POST",
 		contentType: "application/json; charset=utf-8",
 		data: JSON.stringify(data),
@@ -256,7 +256,7 @@ function updateIteam(){
 		
 		
 		$.ajax({
-		url: "${pageContext.servletContext.contextPath}/addTodoTask",
+		url: ctx+"/addTodoTask",
 		type: "POST",
 		contentType: "application/json; charset=utf-8",
 		data: JSON.stringify(jsondata),

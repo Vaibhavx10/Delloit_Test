@@ -29,6 +29,7 @@
 </style>
 </head>
 <body onload="initialize()">
+<script>var ctx = "${pageContext.request.contextPath}"</script>
 	<div class="container card ">
 		<jsp:include page="/WEB-INF/views/header.jsp" />
 		<h2 class="text-center" id="regPage">Add New To do List</h2>
