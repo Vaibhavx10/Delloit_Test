@@ -77,7 +77,7 @@ userSessionData = JSON.parse(sessionStorage.getItem("userData"));
 	
 	var description = validation("05");
 	var detaildescription = validation("06");
-	var refrencelink = validation("07");
+	var refrencelink = $('#validationCustom07').val().trim();
 	
 	var alarm = $("#dropdownalarm").attr("href");
 	var status = $("#dropdownstatus").text();

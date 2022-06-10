@@ -44,7 +44,7 @@ $.ajax({
                   <div id='${collapseable}' class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
                     <div class="accordion-body">
                       <div class="list-group">
-                        <h5 class="list-group-item list-group-item-action list-group-item-secondary">Detail Description : </h5>
+                        <h5 class="list-group-item list-group-item-action list-group-item-secondary">Detail Description : ${response[i].detaildescription} </h5>
                         <table class="table-style">
                           <tr>
                             <td colspan="6" class="h7 text-dark"><span id="idOrginalDate">Orginal Date : ${response[i].orginaldatetime} </span></td> 

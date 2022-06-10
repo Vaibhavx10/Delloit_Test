@@ -13,7 +13,7 @@ import com.interview.todoapp.entity.Task;
 import com.interview.todoapp.entity.User;
 import com.interview.todoapp.repo.UserRepo;
 
-//This is load dummy data on startup 
+//This is load data on startup 
 @Component
 public class DataLoaderOnStart implements ApplicationRunner {
 

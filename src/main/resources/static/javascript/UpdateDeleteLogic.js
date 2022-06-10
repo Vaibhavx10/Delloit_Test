@@ -3,7 +3,7 @@ checkUserSession();
 hideValidationfailedMessage();
 var userData = JSON.parse(sessionStorage.getItem("userData"));
 var emailID = userData.UserEmail;
-
+var targetUpdateData;
 
 
 
@@ -31,7 +31,7 @@ $.ajax({
 		for (let i = 0; i < response.length; i++) {
 		
 		var jsonresponse = JSON.stringify(response[i]); 
-		//console.log("jsonresponse :: "+jsonresponse);
+		console.log("jsonresponse :: "+jsonresponse);
 		
 		//So that every itteration dropdown is proper
 		var collapseable = "flush-collapse"+i;
@@ -49,7 +49,7 @@ $.ajax({
                         </div>
                         <div class="col-lg-4">
                           <button  class="btn btn-success btn-lg"
-                          		data-bs-toggle="modal" onclick="hideValidationfailedMessage()" data-bs-target="#updateModal" >
+                          		data-bs-toggle="modal" onclick='setTargetData(${jsonresponse})' data-bs-target="#updateModal" >
                             Update
                           </button>
                         </div>
@@ -64,7 +64,7 @@ $.ajax({
                   <div id='${collapseable}' class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush">
                     <div class="accordion-body">
                       <div class="list-group">
-                        <h5 class="list-group-item list-group-item-action list-group-item-secondary">Detail Description : </h5>
+                        <h5 class="list-group-item list-group-item-action list-group-item-secondary">Detail Description : ${response[i].detaildescription}</h5>
                         <table class="table-style">
                           <tr>
                             <td colspan="6" class="h7 text-dark"><span id="idOrginalDate">Orginal Date : ${response[i].orginaldatetime} </span></td> 
@@ -177,8 +177,12 @@ $.ajax({
 			<div class="modal-footer">
 				<button type="button" class="btn btn-secondary"
 					data-bs-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary"
-					onclick='updateIteam(${jsonresponse})'>Update changes</button>
+				<div class="col-lg-4" onclick='updateIteam()'>
+                          <button  class="btn btn-primary btn-lg">
+                            Update Changes
+                          </button>
+                        </div>
+					
 			</div>
 		</div>
 	</div>
@@ -226,15 +230,15 @@ function deleteIteam(data) {
 }
 
 
-function updateIteam(data){
+function updateIteam(){
 	
 	hideValidationfailedMessage();
-	var jsondata = data;
-	console.log("update Data :"+JSON.stringify(data))
+	var jsondata = targetUpdateData;
+	console.log("update Data :"+JSON.stringify(jsondata))
 	
 	var description = validation("05");
 	var detaildescription = validation("06");
-	var refrencelinks = validation("07");
+	var refrencelinks = $('#validationCustom07').val().trim();
 	
 	var alarm = $("#dropdownalarm").attr("href");
 	var status = $("#dropdownstatus").text();
@@ -315,4 +319,9 @@ function validation(num){
     }else {
 	  return genricFieldData;
 	}
+}
+
+function setTargetData(data){
+	hideValidationfailedMessage();
+	targetUpdateData = data;
 }

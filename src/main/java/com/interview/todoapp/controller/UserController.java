@@ -72,6 +72,7 @@ public class UserController {
 	// Add user to-do tasks
 	@PostMapping("/addTodoTask")
 	public Task addTodoTask(@RequestBody Task task) {
+		System.out.println("addTodoTask :: "+task);
 		return taskService.addNewTask(task);
 	}
 

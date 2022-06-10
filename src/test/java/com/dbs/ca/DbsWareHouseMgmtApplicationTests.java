@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.interview.todoapp.DbsWareHouseMgmtApplication;
+import com.interview.todoapp.ToDoApplication;
 import com.interview.todoapp.entity.Task;
 import com.interview.todoapp.entity.User;
 import com.interview.todoapp.repo.TaskRepo;
@@ -23,8 +23,8 @@ import com.interview.todoapp.service.TaskService;
 import com.interview.todoapp.service.UserService;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = DbsWareHouseMgmtApplication.class)
-class DbsWareHouseMgmtApplicationTests {
+@SpringBootTest(classes = ToDoApplication.class)
+class ToDoApplicationTests {
 
 	@MockBean
 	private TaskRepo taskrepo;
