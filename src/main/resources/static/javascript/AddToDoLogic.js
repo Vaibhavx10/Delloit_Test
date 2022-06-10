@@ -106,7 +106,7 @@ userSessionData = JSON.parse(sessionStorage.getItem("userData"));
 				
 				
             $.ajax({
-              url: '/addNewUser',
+              url: '${pageContext.servletContext.contextPath}/addNewUser',
 			  type: 'POST',
 			  contentType: "application/json; charset=utf-8",
               data:JSON.stringify(data),
@@ -141,7 +141,7 @@ userSessionData = JSON.parse(sessionStorage.getItem("userData"));
 		
 	if(description && detaildescription){
 			 $.ajax({
-		              url: '/addTodoTask',
+		              url: '${pageContext.servletContext.contextPath}/addTodoTask',
 					  type: 'POST',
 					  contentType: "application/json; charset=utf-8",
 		              data:JSON.stringify(taskdata),

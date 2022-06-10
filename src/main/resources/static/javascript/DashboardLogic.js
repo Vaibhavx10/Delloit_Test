@@ -10,7 +10,7 @@ var data = {
 
 
 $.ajax({
-		url: "/getDataOnEmailID",
+		url: "${pageContext.servletContext.contextPath}/getDataOnEmailID",
 		type: "POST",
 		contentType: "application/json; charset=utf-8",
 		dataType: "json",
@@ -76,6 +76,6 @@ $.ajax({
 function checkUserSession() {
 	var userData = JSON.parse(sessionStorage.getItem("userData"));
 	if (userData == null) {
-		window.location.href = `../login`;
+		window.location.href = `${pageContext.servletContext.contextPath}/login`;
 	}
 }

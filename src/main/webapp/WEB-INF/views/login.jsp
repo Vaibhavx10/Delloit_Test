@@ -9,7 +9,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
         
 </head>
-<body onload="init()" style="background-image: url('../img/bgimg.jpg');">
+<body onload="init()" style="background-image: url('${pageContext.servletContext.contextPath}/img/bgimg.jpg');">
+<script>var ctx = "${pageContext.request.contextPath}"</script>
+
 
 <!-- Button trigger modal -->
 
@@ -56,6 +58,6 @@
         crossorigin="anonymous"></script>
         
         
-<script src="../javascript/LoginLogic.js"></script>
+<script src="${pageContext.servletContext.contextPath}/javascript/LoginLogic.js"></script>
 </body>
 </html>

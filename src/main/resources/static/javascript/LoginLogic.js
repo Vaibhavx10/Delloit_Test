@@ -12,7 +12,6 @@ var UserRole;
  * Initializer function
  */
 function init() {
-
 	checkUserSession()
 
 }
@@ -23,7 +22,7 @@ function checkUserSession() {
 		renderLoginModal();
 	}
 	else {
-		window.location.href = `../dashboard`;
+		window.location.href = ctx+`/dashboard`;
 	}
 }
 
@@ -67,7 +66,7 @@ function validateLogin() {
 	}
 
 	$.ajax({
-		url: "/loginUser",
+		url: ctx+"/loginUser",
 		type: "GET",
 
 		data: todoUser,
@@ -93,5 +92,5 @@ function validateLogin() {
 
 
 function createUser() {
-	window.location.href = `../addtodo`;
+	window.location.href = ctx+`/addtodo`;
 }
