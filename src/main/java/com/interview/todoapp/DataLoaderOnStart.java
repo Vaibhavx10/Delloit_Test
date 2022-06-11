@@ -29,7 +29,7 @@ public class DataLoaderOnStart implements ApplicationRunner {
 			tasklist.add(new Task(100, "test@gmail.com", "Delliot Test",
 					"This applicatio is created to  demonstrate skills for easy interview process", (new Date()).toString(),
 					(new Date()).toString(), "Yes", "Ongoing", "Red", "NO"));
-			User user = new User(100, "test", "pwd123", "testingAccount", "mhatre", "test@gmail.com", tasklist);
+			User user = new User(100, "test", "pwd123", "testingAccount", "lasthuman", "test@gmail.com", tasklist);
 			userRepo.save(user);
 		}
 

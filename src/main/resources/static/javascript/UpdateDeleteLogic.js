@@ -47,14 +47,14 @@ $.ajax({
                             ${response[i].description} 
                           </button>
                         </div>
-                        <div class="col-lg-4">
-                          <button  class="btn btn-success btn-lg"
+                        <div class="col-lg-4" >
+                          <button  class="btn btn-success btn-lg" 
                           		data-bs-toggle="modal" onclick='setTargetData(${jsonresponse})' data-bs-target="#updateModal" >
                             Update
                           </button>
                         </div>
-                        <div class="col-lg-4" onclick='deleteIteam(${jsonresponse})'>
-                          <button  class="btn btn-danger btn-lg">
+                        <div class="col-lg-4" style="width: 0;" onclick='deleteIteam(${jsonresponse})'>
+                          <button  class="btn btn-danger btn-lg" >
                             Delete
                           </button>
                         </div>
@@ -324,4 +324,9 @@ function validation(num){
 function setTargetData(data){
 	hideValidationfailedMessage();
 	targetUpdateData = data;
+	
+	$("#validationCustom05").attr("placeholder",targetUpdateData.description);
+	$("#validationCustom06").attr("placeholder",targetUpdateData.detaildescription);
+	$("#validationCustom07").attr("placeholder",targetUpdateData.refrencelinks);
+	
 }

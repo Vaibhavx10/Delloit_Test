@@ -32,11 +32,5 @@ public class DashboardController {
 		return tasklist;
 		
 	}
-	public static void main(String[] args) throws JSONException {
-		String emailID = "{\"emailID\":\"admin@gmail.com\"}";
-		JSONObject obj = new JSONObject(emailID);
-		String email = obj.getString("emailID");
-		System.out.println(email);
-		
-	}
+
 }
